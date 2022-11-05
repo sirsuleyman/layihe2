@@ -1,79 +1,86 @@
-let topImgBtn = document.querySelector(".top-img");
-let bottomImgBtn = document.querySelector(".bottom-img");
-let btn = document.querySelector(".btn");
-let myInput = document.querySelector(".input");
-let addList = document.querySelector(".add-list");
-let list = document.querySelector(".lists");
-let plusbtn = document.querySelector(".plus-btn");
-let listOne = document.querySelectorAll("li");
-let xbtn = document.querySelector(".x-btn");
-let yellowDiv = document.querySelector('.yellow');
-let container = document.querySelector('.todo-container');
+const touchPicture = document.querySelector('.picture');
+const touchImg = document.querySelector('.img');
+const touchButton = document.querySelector('.enter')
+const touchInput = document.querySelector('.text');
+const touchBtn = document.querySelector('.x-btn');
+const touchList = document.querySelector('.list');
+const touchLists = document.querySelector('.lists');
+const touchLi = document.querySelectorAll('li');
+const touchContainer = document.querySelector('.container');
+const touchCircle = document.querySelector('.circlee')
 
 
-
-list.addEventListener("click", (e) => {
+touchList.addEventListener("click", (e) => {
   if (e.target.tagName === "BUTTON") {
     e.target.parentElement.remove()
   }
 });
-btn.addEventListener("click", () => {
-  if (myInput.value === "") {
-    alert("Deyer daxil et");
+
+touchButton.addEventListener('click', () => {
+  if (touchInput.value === "") {
+    alert("Add the value");
   } else {
-    list.style.display = "block";
-    addList.style.display = "block";
-    let value = myInput.value;
-    list.innerHTML += `<li>${value} <button class="x-btn">X</button></li>`;
-    list.style.display = "flex";
-    list.style.flexDirection = "column";
-    list.style.justifyContent = "space-evenly";
-    yellowDiv.style.width = '100%';
-    container.style.width = '470px';
-    myInput.style.width = '410px';
-    list.style.fontSize = '20px';
-    myInput.value = ''
-    if (value.length > 40) {
-      list.innerHTML += `<li>${value} <button class="x-btn">X</button></li>`;
-      list.style.width = "40%";
-    }
+    touchList.style.display = "block";
+    touchLists.style.display = "block";
+    let value = touchInput.value;
+    touchList.innerHTML += `<li>${value} <button class="x-btn">X</button></li>`;
+    touchInput.value = '' 
+    touchList.style.display = "flex";
+    touchList.style.flexDirection = "column";
+    touchList.style.justifyContent = "space-between";
+    touchList.style.width = '100%';
+    touchLists.style.height = '100%' 
+    touchContainer.style.height = '100%';
+    touchContainer.style.width = '336px';
+    touchLists.style.width = '100%';
+    touchLi.style.width ='100%'
+    touchLi.style.height = '100%';
+    touchList.style.fontSize = '20px';
+
   }
 });
 
+
 if (
-  bottomImgBtn.addEventListener("click", () => {
-    topImgBtn.style.display = "block";
-    bottomImgBtn.style.display = "none";
+  touchPicture.addEventListener("click", () => {
+    touchImg.style.display = "block";
+    touchPicture.style.display = "none";
     let arr = [];
-  const data = [...list.children];
+  const data = [...touchList.children];
   data.forEach(item =>{
     arr.push(item.innerHTML);
   })
   arr.sort();
-  list.innerHTML = '';
+  touchList.innerHTML = '';
   arr.forEach(item =>{
     let li = `<li>${item}</li>`;
-    list.innerHTML += li;
+    touchList.innerHTML += li;
   })
   })
 ) {
 }
 if (
-  topImgBtn.addEventListener("click", () => {
-    bottomImgBtn.style.display = "block";
-    topImgBtn.style.display = "none";
+  touchImg.addEventListener("click", () => {
+    touchPicture.style.display = "block";
+    touchImg.style.display = "none";
     let arr = [];
-    const data = [...list.children];
+    const data = [...touchList.children];
     data.forEach(item =>{
       arr.push(item.innerHTML);
     })
     arr.sort();
     arr.reverse()
-    list.innerHTML = '';
+    touchList.innerHTML = '';
     arr.forEach(item =>{
       let li = `<li>${item}</li>`;
-      list.innerHTML += li;
+      touchList.innerHTML += li;
     })
   })
 ) {
 }
+
+
+
+
+
+

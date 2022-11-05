@@ -1,45 +1,96 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-.container{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   margin-top: 232px;
-   margin-left: 658px;
-   width: 336px;
-   height: 236px;
-   border-radius: 10px;
-   border-color: gray;
+body{
+    background-color: rgba(236, 156, 37, 0.793);
 }
-.todo-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, .3);
+.container{
+    box-sizing: border-box;
+    position: relative;
+    width: 336px;
+    height: 236px;
+    left: 408px;
+    top: 232px;
+    border: 1px solid #C4C4C4;
     border-radius: 10px;
-    width: 410px;
-    font-family: 'Roboto', sans-serif;
+    margin-left: 131px;
+    background-color: white;
+    padding: 5px;
+}
+.yellow{
+width: 100%;
+height: 28px;
+margin: -5px;
+background: #FFDC40;
+border-radius: 10px;
+border-bottom-left-radius:0px;
+border-bottom-right-radius:0px ;
+}
+h1{
+font-style: normal;
+font-weight: 900;
+font-size: 26px;
+line-height: 30px;
+text-align: center;
+text-transform: capitalize;
+color: #000000;
+}
+.picture{
+    width: 25px;
+    height: 15px;
+    margin-left: 281px;
+    margin-bottom: 5px;
+    
+}
+.img{
+    width: 25px;
+    height: 15px;
+    margin-left: 281px;
+    margin-bottom: 5px;
+    display: none;
+   
+}
+.text{
+    box-sizing: border-box;
+width: 286px;
+height: 40px;
+margin-left: 28px;
+border: 1px solid #C4C4C4;
+border-radius: 10px;
 
 }
-.todo-container .yellow{
-    width: 410px;
-height: 30px;
-border-radius: 10px;
-background-color: #FFDC40;
-border-bottom-left-radius: 0px;
-border-bottom-right-radius: 0px;
+.circle{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 272px;
+    top: 121px;
 }
-.todo-container img{
-    width: 25px;
-height: 15px;
-margin-left: 290px;
-margin-bottom: 30px;
+.enter{
+    border: none;
+    max-width: 150px;
+    width: 150px;
+    height: 42px;
+    margin-top: 19px;
+    margin-left: 92px;
+    padding-top: 0px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+    background: #833AE0;
+    border-radius: 71px;
+    color: white;
 }
-.todo-container h1{
-    width: 164px;
-height: 34px;
-font-size: 35px;
+.buttton{
+border: none;
+width: 42px;
+height: 42px;
+margin-right: -25px;
+background-color: #9953F1;
+border-radius: 71px;
+color: white;
+}
+.circle:hover{
+   background-color: #833AE0;
+   border-radius: 72px;
 }
 .x-btn{
     border-radius: 50%;
@@ -49,73 +100,27 @@ font-size: 35px;
     margin-bottom: 25px;
     margin-left: 220px;
 }
+.x-btn{
+   
+    width: 35px;
+    height: 22px;
+    border: none;
+    margin-bottom: 25px;
+    margin-left: 220px;
+}
 .x-btn:hover{
     background-color: #833AE0;
 }
-input{
-    width: 330px;
-    border-radius: 8px;
-    height: 35px;
-    outline: none;
-    border-color: rgb(164, 162, 162);
-    font-size: 20px;
-}
-input:hover{
-    outline: #FFDC40;
-    transform: scale(1.02);
-    outline-style: solid;
-}
-.btn{
-    border-radius: 18px;
-    background-color: #833AE0 ;
-    width: 170px;
-height: 50px;
-border: none;
-margin-top: 0px;
-margin-bottom: 50px;
-padding: 10px;
-font-size: 20px;
-}
-.btn  .plus{
-    border-radius: 50%;
-    background-color: #9953F1;
-    border: none;
-    width: 145px;
-    height: 90px;
-    font-size: 25px;
-    color: white;
-    margin-right: 30px;
-}
-.plus:hover{
-    background-color: #833AE0;
-}
-.btn {
-    color: #fff;
-}
-.btn:hover{
-    background-color: #9953F1;
-    box-shadow: 1px 1px 15px rgba(0, 0, 0, .1);
+.circlee{
+    background-color: white;
     border: none;
 }
-.lists , .add-list{
-    width: 60%;
-    display: none;
-    color: #9953F1;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
-    margin-bottom: 30px;
-}
-li{
-    border: 10px gray;
-    width: 60%;
-    /* height: 300px; */
-    list-style: none;
-    margin-right: 80px;
-    margin-left: 100px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: space-evenly;
-}
+
+
+
+
+
+
+
+
+
