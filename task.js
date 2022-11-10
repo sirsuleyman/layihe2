@@ -7,9 +7,11 @@ const touchList = document.querySelector('.list');
 const touchLists = document.querySelector('.lists');
 const touchLi = document.querySelectorAll('li');
 const touchContainer = document.querySelector('.container');
-const touchCircle = document.querySelector('.circlee')
+const touchCircle = document.querySelector('.circle')
 
-
+touchCircle.addEventListener('click', ()=>{
+  touchInput.value=''
+})
 touchList.addEventListener("click", (e) => {
   if (e.target.tagName === "BUTTON") {
     e.target.parentElement.remove()
@@ -41,8 +43,7 @@ touchButton.addEventListener('click', () => {
 });
 
 
-if (
-  touchPicture.addEventListener("click", () => {
+if (touchPicture.addEventListener("click", () => {
     touchImg.style.display = "block";
     touchPicture.style.display = "none";
     let arr = [];
@@ -59,8 +60,7 @@ if (
   })
 ) {
 }
-if (
-  touchImg.addEventListener("click", () => {
+if (touchImg.addEventListener("click", () => {
     touchPicture.style.display = "block";
     touchImg.style.display = "none";
     let arr = [];
